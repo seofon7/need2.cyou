@@ -17,6 +17,14 @@ sections:
 - type: heading
   label: Pages
 - type: document
+  path: src/index.md
+  label: Home
+  match: "**/*"
+- type: document
+  path: src/about.md
+  label: About
+  match: "**/*"
+- type: document
   path: src/data/navigation.json
   label: Navigation
 upload_dir: src/images
