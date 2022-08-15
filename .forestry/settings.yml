@@ -4,6 +4,8 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: heading
+  label: Content
 - type: directory
   path: content
   label: Pages
@@ -12,6 +14,17 @@ sections:
 - type: directory
   path: content/posts
   label: Posts
+  create: all
+  match: "**/*"
+- type: heading
+  label: Configuration
+- type: document
+  path: config.yml
+  label: Config
+  match: "**/*"
+- type: directory
+  path: archetypes
+  label: Archetypes
   create: all
   match: "**/*"
 upload_dir: static/uploads
