@@ -1,6 +1,6 @@
 ---
 title: "Search"
 layout: "search"
-summary: "Search the site"
+summary: "search"
 placeholder: "What are you looking for?"
 ---
