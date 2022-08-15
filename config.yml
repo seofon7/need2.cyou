@@ -6,3 +6,81 @@ permalinks:
   posts: /:year/:month/:title
 timeZone: America/Edmonton
 
+params:
+  env: production
+  title: need2.cyou
+  description: "Just a relaxed little blog"
+  keywords: [Blog]
+  author: Em
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: false
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: true
+  disableScrollToTop: true
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+
+  assets:
+    favicon: "/static/sitewide/favicon.ico"
+    favicon16x16: "/static/sitewide/favicon16.ico"
+    favicon32x32: "/static/sitewide/favicon32.ico"
+    apple_touch_icon: "/static/sitewide/apple_touch_icon.ico"
+    safari_pinned_tab: "/static/sitewide/safari_pinned_tab.ico"
+
+  profileMode:
+    enabled: false
+    title: need2.cyou
+    subtitle: "Just a relaxed little blog"
+    buttons:
+      - name: Posts
+        url: posts
+      - name: Tags
+        url: tags
+
+  homeInfoParams:
+    Title: "Welcome!"
+    Content: "This is my blog, feel free to have a look around!"
+
+  cover:
+    responsiveImages: false
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+menu:
+  main:
+    - identifier: archive
+      name: Archive
+      url: /archive/
+      weight: 10
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 10
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 10
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
