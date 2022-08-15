@@ -1,3 +1,8 @@
-baseURL: http://example.org/
+baseURL: https://need2.cyou/
 languageCode: en-us
-title: My New Hugo Site
+title: need2.cyou
+theme: "PaperMod"
+permalinks:
+  posts: /:year/:month/:title
+timeZone: America/Edmonton
+
