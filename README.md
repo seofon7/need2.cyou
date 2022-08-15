@@ -1,174 +1,182 @@
-# Eleventy Duo
+# A simple starter kit for Eleventy
 
-Eleventy Duo is a minimal and beautiful Eleventy theme for personal blogs.
+Hylia is a lightweight [Eleventy](https://11ty.io) starter kit with [Forestry CMS](https://forestry.io/) pre-configured, so that you can one-click install a progressive, accessible blog in minutes. It also gives you a well organised starting point to extend it for yourself.
 
-![demo site screenshot](./screenshot.png)
+[![Import to Forestry](https://assets.forestry.io/import-to-forestryK.svg)](https://app.forestry.io/quick-start?repo=dirtyf/hylia&provider=github&branch=forestry&engine=other&preview=https://hankchizljaw.imgix.net/hylia-github.jpg?auto=format&q=60)
 
-### [Live demo](https://eleventyduo.netlify.app)
+<img src="https://hankchizljaw.imgix.net/hylia-github.jpg?auto=format&q=60" width="550" />
 
 ## Features
 
-- Fully responsive
+Hylia version 0.7.0 features:
 
-- SEO metadata and Open Graph tags
+🎨 Customisable design tokens to make it your own  
+🌍 Customisable global data and navigation  
+📂 Tags and tag archives  
+🎈 _Super_ lightweight front-end  
+✅ Progressively enhanced, semantic and accessible  
+🚰 Sass powered CSS system with utility class generator  
+⚙️ Service worker that caches pages so people can read your articles offline  
+🚀 An RSS feed for your posts  
+💌 A basic contact form, ready for [Netlify Forms](https://docs.netlify.com/forms/setup/#html-forms)
+✍️ A pre-configured [Forestry CMS](https://forestry.io/) setup
 
-- Maximize lighthouse score
+## Roadmap
 
-- Cache busting
+💬 [Netlify Forms](https://www.netlify.com/docs/form-handling/) powered comments  
+💡 ~~Dark/Light mode toggle~~ [Added in 0.4.0](https://github.com/hankchizljaw/hylia/releases/tag/0.4.0)  
+🗣 Webmentions  
+📖 Pagination  
+🐦 Web sharing API integration  
+🗒 Offline mode with links to cached pages  
+📄 Documentation site  
+💅 Proper Sass documentation  
+✍️ Proper CMS documentation  
+🖼 A facility for you to be able to add your logo / branding  
 
-- 404 page
-
-- RSS feed for posts
-
-- Tags support
-
-- Pagination support
-
-- Syntax highlighting with PrismJS
-
-## Getting Started
-
-- [Generate a new repo from this repository template](https://github.com/yinkakun/eleventy-duo/generate) which will copy this project into your own new repo.
-
-- Clone your new repository with `git clone https://github.com/YOUR_REPO`,
-
-- Navigate to the newly created repo
-
-- Install dependencies with `yarn install`
-
-- Serve the site locally with `yarn dev`
-
-- Use `yarn build` to build a production version of the site.
-
-## Customize
-
-Open `data/site.json` and adjust the values to your details, it contains vital information to make the site your own. You'll need to change the description, title and url to match with the project, edit navigation items and social media links.
-
-You'll also need to replace the favicon and default social image in the `src/images/` directory with your own graphics.
-
-## Manually Edit contents
-
-### Homepage
-
-Edit the homepage content at `src/index.md`.
-
-Sample frontmatter for homepage.
-
-```
----
-layout: home
-title: 'Eleventy Duo'
 ---
 
-Contents
+
+## Terminal commands
+
+### Serve the site locally
+
+```bash
+npm start
 ```
 
-### About page
+### Build a production version of the site
 
-Edit the about page content at `src/about.md`.
-
-Sample frontmatter for about page.
-
-```
----
-title: About Aidan Charles Powell
-layout: about.njk
-name: Aidan Charles Powell
-image: '/images/me.jpeg'
----
-
-Contents
+```bash
+npm run production
 ```
 
-### Blog posts
+### Compile Sass
 
-Blog contents is at `src/posts`. Delete placeholder blog posts. Do not delete the `posts.json` file. Create blog posts in markdown format.
-
-Sample frontmatter for blog posts.
-
-```
----
-title: Even yet another post with rich media
-date: '2020-12-24'
-tags: [demo-content, media]
-decription: The last person we talked to said this would be ready action item, and what do you feel you would bring to the table if you were hired for this position bells and whistles. #optional
----
-
-Contents
+```bash
+npm run sass:process
 ```
 
-### Generic pages
+### Re-generate design tokens for Sass
 
-You can create generic pages in markdown format that use a base layout.
-
-Sample frontmatter for generic pages.
-
+```bash
+npm run sass:tokens
 ```
----
-layout: base
-permalink: /generic-page
-title: Generic page
+
+## Getting started with the CMS
+
+[![Import to Forestry](https://assets.forestry.io/import-to-forestryK.svg)](https://app.forestry.io/quick-start?repo=dirtyf/hylia&provider=github&branch=forestry&engine=other&preview=https://camo.githubusercontent.com/8bae59778d46d15e98e701d5b6f4d0cb3a2cb880/68747470733a2f2f68616e6b6368697a6c6a61772e696d6769782e6e65742f68796c69612d6769746875622e6a70673f6175746f3d666f726d617426713d3630)
+
+Once the site is imported in Forestry, go to settings/previews to start the preview server.
+
+You'll be able to create drafts and preview the final rendering before publishing.
+
+## Design Tokens and Styleguide
+
+### Design Tokens
+
+Although Hylia has a pretty simple design, you can configure the core design tokens that control the colours, size ratio and fonts.
+
 ---
 
-Contents
+**Note**: _Credit must be given to the hard work [Jina Anne](https://twitter.com/jina) did in order for the concept of design tokens to even exist. You should watch [this video](https://www.youtube.com/watch?v=wDBEc3dJJV8), then [read this article](https://the-pastry-box-project.net/jina-bolton/2015-march-28) and then sign up for [this course](https://aycl.uie.com/virtual_seminars/design_tokens_scaling_design_with_a_single_source_of_truth) to expand your knowledge._
+
+---
+
+To change the design tokens in the CMS, click on “theme settings” in the sidebar.
+
+To change the design tokens directly, edit [`_src/data/tokens.json`](https://github.com/hankchizljaw/hylia/blob/master/src/_data/tokens.json).
+
+The tokens are converted into maps that the Sass uses to compile the front-end CSS, so make sure that you maintain the correct structure of `tokens.json`.
+
+### Styleguide
+
+Your version of Hylia ships with a Styleguide by default. You can see a demo of the Styleguide at <https://hylia.website/styleguide/>.
+
+You can edit the Styleguide by opening [`src/styleguide.njk`](https://github.com/hankchizljaw/hylia/blob/master/src/styleguide.njk). If you don’t want the Styleguide, delete that file and the page will vanish.
+
+## Sass
+
+Hylia is based on the [WIP v2 version of Stalfos](https://github.com/hankchizljaw/stalfos/tree/feature/v2), which currently has no documentation (I know, I’m bad). Here is some very basic documentation for elements of the new framework that you will encounter on this project.
+
+### Configuration
+
+The whole Sass system is powered by central config file, which lives here: [`_src/scss/_config.scss`](https://github.com/hankchizljaw/hylia/blob/master/src/scss/_config.scss).
+
+Before Sass is compiled, a `_tokens.scss` file is generated from the [design tokens config](https://github.com/hankchizljaw/hylia/blob/master/src/_data/tokens.json) which is required.
+
+Key elements:
+
+- `$stalfos-size-scale`: A token driven size scale which by default, is a “Major Third” scale
+- `$stalfos-colors`: A token driven map of colours
+- `$stalfos-util-prefix`: All pre-built, framework utilities will have this prefix. Example: the wrapper utility is '.sf-wrapper' because the default prefix is 'sf-'
+- `$metrics`: Various misc metrics to use around the site
+- `$stalfos-config`: This powers everything from utility class generation to breakpoints to enabling/disabling pre-built components/utilities
+
+### How to create a new utility class with the generator
+
+The utility class generator lets you generate whatever you want, with no opinions on class name or properties affected.
+
+To add a new class, add another item to the exists `$stalfos-config` map. This example adds a utility for floating elements.
+
+```scss
+'float':('items':('left':'left','right': 'right'
+  ),
+  'output': 'responsive',
+  'property': 'float'
+);
 ```
 
-## Using Forestry as your CMS
+The `output` is set to `responsive` which means every breakpoint will generate a prefixed class for itself. If you only wanted elements to float left in the `md` breakpoint, you’d now be able to add a class of `md:float-left` to your HTML elements.
 
-This project is preconfigured to work with Forestry as a way to manage your content. Forestry makes changes by editing markdown or data files, uploading media to the correct directory and committing these updates to your repo directly.
+If you only want standard utility classes generating, set the `output` to `standard`.
 
-Eleventy Duo has Forestry CMS pre-configured as standard. You can customize the configuration by editing `.forestry/settings.yml.`
+### Functions
 
-Sign up for a free [Forestry](https://forestry.io) account
+#### `get-color($key)`
 
-Import your repo as a new [Eleventy project](https://forestry.io/docs/quickstart/setup-site/#import-site-from-repo)
+Function tries to match the passed `$key` with the `$stalfos-colors` map. Returns null if it can’t find a match.
 
-Once the site is imported in Forestry, go to settings/previews to start the preview server. You'll be able to preview the final rendering before publishing.
+#### `get-config-value($key, $group)`
+
+Returns back a 1 dimensional (key value pair) config value if available.
+
+#### `get-size($ratio-key)`
+
+Function tries to match the passed `$ratio-key` with the `$stalfos-size-scale`. Returns null if it can’t find a match.
+
+### Mixins
+
+#### `apply-utility($key, $value-key)`
+
+Grabs the property and value of one of the `$stalfos-config utilities` that the generator will generate a class for.
+
+#### `media-query($key)`
+
+Pass in the key of one of your breakpoints set in `$stalfos-config['breakpoints']` and this mixin will generate the `@media` query with your configured value.
+
+## CMS
+
+Hylia has [Forestry CMS](https://forestry.io/) pre-configured as standard. You can customise the configuration by editing [`.forestry/settings.yml`](https://github.com/DirtyF/hylia/blob/forestry/.forestry/settings.yml).
+
+### Content that you can edit
 
 The basic CMS setup allows you to edit the following:
 
-- Home page: Edit the content on your homepage.
+- **Home page**: Edit the content on your homepage
+- **Posts**: Create and edit blog posts
+- **Generic pages**: Create generic pages that use a similar layout to posts
+- **Global site data**: Various bits of global site data such as your url, title, posts per page and author details
+- **Navigation**: Edit your primary navigation items
+- **Theme**: Edit the design tokens that power the site’s theme
 
-- About page: Edit the content of your about page.
+## Get involved
 
-- Posts: Create and edit blog posts.
+This project is _super_ early and feedback is very much welcome. In order to keep things running smooth, please consult the [contribution guide and code of conduct](https://github.com/hankchizljaw/hylia/blob/master/contributing.md).
 
-- Generic pages: Create generic pages that use a similar layout to posts.
+The stuff that I need the most help with is:
 
-- Global site data: Various bits of global site data such as your url, title, and other details.
+- Documentation
+- [Webmentions](https://www.w3.org/TR/webmention/)
+- Performance
 
-You can add new blog posts, [data files](https://forestry.io/docs/editing/data-files/), or entire pages to fit your needs. You can also customize [how media is handled](https://forestry.io/docs/media/), by configurating gitLFS, Cloudinary, S3, or Netlify Large Media.
-
-You can set up a [remote admin](https://forestry.io/docs/editing/remote-admin/) for content editors to log in directly to yoururl.com/admin to make content updates.
-
-## Deployment
-
-[Netlify](https://netlify.com) is a great way to easily deploy sites. There's no special setup you need to do with Forestry to deploy with Netlify. When Forestry makes commits to your repo, Netlify will auto-trigger a rebuild / deploy when new commits are made.
-
-- Create a new site in Netlify and import your repository.
-
-- Set the build command to `yarn build`
-
-- Set the publish directory to `public`
-
-## Built with
-
-- Eleventy for site generation (obviously)
-
-- Webpack for asset bundling
-
-- PostCSS for CSS processing
-
-- Autoprefixer for vendor prefixing CSS
-
-- PostCSS Preset Env for transpiling css
-
-- PurgeCSS for unused CSS removal
-
-- CSSNano for CSS minification
-
-## License
-
-This project is licensed under the MIT License.
-
-Isn't Jamstack beautiful?

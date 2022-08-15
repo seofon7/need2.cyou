@@ -1,4 +1,5 @@
 ---
+title: Tag Archive
 pagination:
   data: collections
   size: 1
@@ -9,14 +10,26 @@ pagination:
     - post
     - posts
     - tagList
+    - postFeed
   addAllPagesToCollections: true
-layout: base.njk
 permalink: /tags/{{ tag }}/
-eleventyComputed:
-  title: "{{ tag | title }}"
-  description: "All posts tagged “{{ tag }}”"
 ---
-<h1>{{ tag | title }}</h1>
 
-{% set postslist = collections[tag] %}
-{% include "posts-list.njk" %}
+{% extends 'layouts/base.njk' %}
+
+{# Intro content #}
+{% set introHeading %}Posts filed under “{{ tag }}”{% endset %}
+{% set introHeadingLevel = '2' %}
+
+{# Post list content #}
+{% set postListHeadingLevel = '2' %}
+{% set postListHeading = 'Posts' %}
+{% set postListItems = collections[tag] %}
+
+{% block content %}
+  <main id="main-content" tabindex="-1">
+    {% include "partials/components/intro.njk" %}
+    {% include "partials/components/post-list.njk" %}
+    {% include "partials/components/pagination.njk" %}
+  </main>
+{% endblock %}

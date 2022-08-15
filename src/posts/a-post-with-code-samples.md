@@ -1,15 +1,28 @@
 ---
 title: A post with code samples
-description: Health goth raw denim vaporware waistcoat, vegan neutra glossier. Cronut chartreuse tbh meh schlitz. Snackwave lumbersexual pinterest narwhal.
-permalink: posts/{{ title | slug }}/index.html
-date: '2020-11-18'
-updated: '2021-02-12'
-tags: [demo-content, code]
+date: '2019-06-18'
+tags:
+  - demo-content
+  - code
+  - blog
 ---
 
-Health goth raw denim vaporware waistcoat, vegan neutra glossier. Cronut chartreuse tbh meh schlitz. Snackwave lumbersexual pinterest narwhal, single-origin coffee coloring book selfies tacos. Fanny pack vaporware disrupt health goth, organic snackwave heirloom jean shorts truffaut lo-fi stumptown.
+The best way to demo a code post is to display a real life post, so check out
+this one from
+[andy-bell.design](https://andy-bell.design/wrote/creating-a-full-bleed-css-utility/)
+about a full bleed CSS utility.
+
+- - -
+
+Sometimes you want to break your components out of the constraints that they find themselves in. A common situation where this occurs is when you don’t have much control of the container that it exists in, such as a CMS main content area.
+
+This is even more the case with editing tools such as the [WordPress Gutenberg editor](https://wordpress.org/gutenberg/), where in theory, you could pull in a component from a design system and utilise it in the main content of your web page. In these situations, it can be pretty darn handy to have a little utility that makes the element 100% of the viewport’s width _and_ still maintain its flow within its parent container.
+
+This is when I normally pull the `.full-bleed` utility class out of my back pocket.
 
 ## The `.full-bleed` utility
+
+It’s small, but hella mighty:
 
 ```css
 .full-bleed {
@@ -19,18 +32,37 @@ Health goth raw denim vaporware waistcoat, vegan neutra glossier. Cronut chartre
 }
 ```
 
-## Heading
+Here it is in a context where it makes a fancy `<aside>` and a `<figure>` element bleed out of their parent container.
 
-Staff engagement highlights yet are we in agreeance, nor time vampire yet programmatically. Imagineer proceduralize. Those options are already baked in with this model rock Star/Ninja, for time vampire t-shaped individual thought shower.
+<iframe height="300" style="width: 100%;" scrolling="no" title="Piccalilli CSS Utility — Issue  #2 — Full bleed utility" src="//codepen.io/andybelldesign/embed/Nmxrwv/?height=300&theme-id=dark&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/andybelldesign/pen/Nmxrwv/'>Piccalilli CSS Utility — Issue  #2 — Full bleed utility</a> by Andy Bell
+  (<a href='https://codepen.io/andybelldesign'>@andybelldesign</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
-Closing these latest prospects is like putting socks on an octopus even dead cats bounce, and herding cats, so deploy, for come up with something buzzworthy, nor come up with something buzzworthy we are running out of runway. PowerPointless idea shower. Cross sabers moving the goalposts. Gain traction.
+The `.full-bleed` utility gives those elements prominence and _importantly_ keeps their semantic place in the page. Just how I like it.
 
-Curate I just wanted to give you a heads-up. Move the needle. Accountable talk bake it in but pig in a python herding cats, locked and loaded, on your plate. Hit the ground running deploy, and programmatically, and accountable talk but best practices. Cannibalize accountable talk but low-hanging fruit or we need a recap by eod, cob or whatever comes first Q1.
+- - -
 
-## Heading
+🔥 **Pro tip**: When working with a utility like `.full-bleed`, it’s a good idea to add an inner container that has a max-width and auto horizontal margin. For this, I normal create a shared `.wrapper` component like this:
 
-Draw a line in the sand time vampire translating our vision of having a market leading platfrom. Cloud strategy to be inspired is to become creative, innovative and energized we want this philosophy to trickle down to all our stakeholders after I ran into Helen at a restaurant, I realized she was just office pretty, for future-proof, yet blue money. Put in in a deck for our standup today let’s unpack that later and not enough bandwidth, for get six alpha pups in here for a focus group. Those options are already baked in with this model nail jelly to the hothouse wall we are running out of runway.
+```css
+.wrapper {
+  max-width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+```
 
-## Heading
+Having a container like `.wrapper` helps to create consistent, centred content.
 
-Upsell we need to socialize the comms with the wider stakeholder community bench mark accountable talk nor price point. Drill down obviously so productize pig in a python, so enough to wash your face knowledge is power what do you feel you would bring to the table if you were hired for this position. New economy. Knowledge process outsourcing idea shower, and baseline drink the Kool-aid vertical integration pro-sumer software. Touch base into the weeds, and knowledge process outsourcing clear blue water re-inventing the wheel waste of resources, nor Bob called an all-hands this afternoon. I don’t want to drain the whole swamp, i just want to shoot some alligators.
+- - -
+
+### How the `.full-bleed` utility works
+
+We set the container to be `width: 100vw`, which equates to the full viewport width. We couldn’t set it to `width: 100%` because it would only fill the space of its parent element. The parent element’s width _is_ useful though, because by setting `margin-left: 50%`, we are telling the component to align its **left edge** to the center of its parent element, because `50%` is half of the **parent element’s** width.
+
+Finally, we use CSS transforms to `translateX(-50%)`. Because the transform works off the element’s dimensions and not the parent’s dimensions, it’ll pull the element back `50vw`, because it’s `100vw` wide, thus making it sit perfectly flush with the viewport’s edges.
+
+## Wrapping up
+
+Hopefully this short and sweet trick will help you out on your projects. If it does, [drop me a tweet](https://twitter.com/andybelldesign), because I’d love to see it!
