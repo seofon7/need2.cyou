@@ -21,17 +21,16 @@ sections:
 - type: document
   path: config.yml
   label: Config
-  match: "**/*"
 - type: directory
   path: archetypes
   label: Archetypes
   create: all
   match: "**/*"
-upload_dir: static/uploads
-public_path: "/uploads"
+upload_dir: static/images
+public_path: "/images"
 front_matter_path: ''
 use_front_matter_path: false
-file_template: ":filename:"
+file_template: ":year::month::day:-:filename:"
 build:
   preview_env:
   - HUGO_ENV=staging
