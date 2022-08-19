@@ -10,9 +10,10 @@ site_url: "https://need2.cyou"
 collections:
   - name: "posts"
     label: "Posts"
-    folder: "content/posts/{{year}}/{{month}}"
+    folder: "content/posts"
     create: true
-    preview_path: "posts/{{year}}/{{month}}/{{slug}}"
+    preview_path: "posts/{{year}}/{month}}/{{slug}}"
+    slug: "{{year}}{{month}}{{slug}}"
     extension: "md"
     fields:
       - {label: "Title", name: "title", widget: "string"}
