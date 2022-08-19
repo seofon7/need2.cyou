@@ -3,16 +3,19 @@ baseURL: https://need2.cyou/
 languageCode: en-us
 title: need2.cyou
 theme: PaperMod
+author:
+  name: "Em"
+  email: "em@need2.cyou"
 permalinks:
   posts: "/:year/:month/:title"
 timeZone: America/Edmonton
 params:
   env: production
   title: need2.cyou
-  description: Just a relaxed little blog
+  description: "Just a relaxed little blog"
   keywords:
   - Blog
-  author: Em
+  author: "Em"
   DateFormat: January 2, 2006
   defaultTheme: auto
   ShowReadingTime: true
