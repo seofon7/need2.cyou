@@ -76,15 +76,19 @@ menu:
   - identifier: archive
     name: Archive
     url: "/archive/"
-    weight: "10"
+    weight: "20"
   - identifier: search
     name: Search
     url: "/search/"
-    weight: "10"
+    weight: "30"
   - identifier: tags
     name: Tags
     url: "/tags/"
-    weight: "10"
+    weight: "40"
+  - identifier: donate
+    name: Donate
+    url: "https://ko-fi.com/need2"
+    weight: "50"
 outputs:
   home:
   - HTML
