@@ -39,8 +39,8 @@ params:
   profileMode:
     enabled: false
   homeInfoParams:
-    Title: Welcome!
-    Content: This is my blog, feel free to have a look around!
+    Title: "Hell yeah!"
+    Content: "This site finally fucking works! I can't believe it! I guess I have to write stuff now? I'm Em btw, it's great to have you here!"
   cover:
     responsiveImages: false
   fuseOpts:
