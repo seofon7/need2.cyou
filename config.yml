@@ -38,13 +38,6 @@ params:
     safari_pinned_tab: "/static/sitewide/safari_pinned_tab.ico"
   profileMode:
     enabled: false
-    title: need2.cyou
-    subtitle: Just a relaxed little blog
-    buttons:
-    - name: Posts
-      url: posts
-    - name: Tags
-      url: tags
   homeInfoParams:
     Title: Welcome!
     Content: This is my blog, feel free to have a look around!
