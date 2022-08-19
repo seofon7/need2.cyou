@@ -10,7 +10,7 @@ site_url: "https://need2.cyou"
 collections:
   - name: "posts"
     label: "Posts"
-    folder: "content/posts"
+    folder: "content/posts/{{year}}/{{month}}"
     create: true
     preview_path: "posts/{{year}}/{{month}}/{{slug}}"
     extension: "md"
