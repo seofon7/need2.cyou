@@ -28,7 +28,9 @@ params:
   ShowRssButtonInSectionTermList: true
   ShowFullTextinRSS: true
   socialIcons:
-    - name: "Rss"
+    - name: "email"
+      url: "em@need2.cyou"
+    - name: "rss"
       url: "/index.xml"
   UseHugoToc: false
   disableSpecial1stPost: true
