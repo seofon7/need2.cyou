@@ -9,6 +9,7 @@ author:
 permalinks:
   posts: "/:year/:month/:title"
 timeZone: America/Edmonton
+enableEmoji: true
 params:
   env: production
   title: need2.cyou
@@ -25,6 +26,10 @@ params:
   ShowCodeCopyButtons: true
   ShowWordCount: false
   ShowRssButtonInSectionTermList: true
+  ShowFullTextinRSS: true
+  socialIcons:
+    - name: "Rss"
+      url: "/index.xml"
   UseHugoToc: false
   disableSpecial1stPost: true
   disableScrollToTop: true
