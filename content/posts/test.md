@@ -1,8 +1,8 @@
 ---
-title: "Test"
+title: Test
 date: 2022-08-18T18:10:10-06:00
-draft: true
-description: "idk something here"
+draft: false
+description: idk something here
 showtoc: false
 ---
 
