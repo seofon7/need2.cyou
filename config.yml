@@ -51,8 +51,8 @@ params:
   profileMode:
     enabled: false
   homeInfoParams:
-    Title: "Hell yeah!"
-    Content: "This site finally fucking works! I can't believe it! I guess I have to write stuff now? I'm Em btw, it's great to have you here!"
+    Title: "Hey there!"
+    Content: "Welcome to my blog! I'm Em. This is where I post all of my rambly thoughts about life. Feel free to poke around or [learn more about me and this site](/about). (note to self: make favicon)"
   cover:
     responsiveImages: false
   fuseOpts:

@@ -1,7 +1,7 @@
 ---
 title: "About"
 summary: "about"
-layout: "single"
+layout: "about"
 url: "/about/"
 DisableShare: true
 ShowBreadCrumbs: false
