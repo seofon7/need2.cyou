@@ -10,7 +10,7 @@ hideMeta: true
 
 Hi there, friends!
 
-I'm Em, and I'm an enby uni student with an overactive internal monologue.
+I'm Emmie (she/her) and I'm an NB engineering dropout with an overactive internal monologue.
 
 I made this site so that I would have a place to throw all my rants and ramblings. The above-mentioned internal monologue needs an outlet!
 
@@ -22,4 +22,4 @@ For now, if you wanna get in touch with me, shoot me an email at [em@need2.cyou]
 
 Thanks for checking out my site!
 
--Em <3
+-Emmie <3
