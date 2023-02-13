@@ -4,7 +4,7 @@ languageCode: en-us
 title: need2.cyou
 theme: PaperMod
 author:
-  name: "Em"
+  name: "Emmie"
   email: "em@need2.cyou"
 permalinks:
   posts: "/:year/:month/:title"
@@ -16,7 +16,7 @@ params:
   description: "Just a relaxed little blog"
   keywords:
   - Blog
-  author: "Em"
+  author: "Emmie"
   DateFormat: January 2, 2006
   defaultTheme: auto
   ShowReadingTime: true
@@ -52,7 +52,7 @@ params:
     enabled: false
   homeInfoParams:
     Title: "Hey there!"
-    Content: "Welcome to my blog! I'm Em. This is where I post all of my rambly thoughts about life. Feel free to poke around or [learn more about me and this site](/about). (note to self: make favicon)"
+    Content: "Welcome to my blog! I'm Emmie. This is where I post all of my rambly thoughts about life. Feel free to poke around or [learn more about me and this site](/about). (note to self: make favicon)"
   cover:
     responsiveImages: false
   fuseOpts:
