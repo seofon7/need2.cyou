@@ -83,7 +83,7 @@ Finally, I convinced myself to open those responses.
 
 And they were outstandingly positive, every single one of them.
 
-I felt so so validated and accepted in a way that I hadn't before. I bore myself to these people that I loved, and they saw me and loved me back.
+I felt so so validated and accepted in a way that I hadn't before. I bared myself to these people that I loved, and they saw me and loved me back.
 
 I don't think I can adequately express in words exactly how much that meant to me. It was the emotional experience of a lifetime, and I was so filled with relief and joy in that moment.
 
