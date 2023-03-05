@@ -5,6 +5,9 @@
     {{- partial "head.html" . }}
     {{- if .IsHome }}
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+        {{- if .Description }}
+        <meta name="description" content="{{ .Description }}" />
+        {{ end }}
     {{ end }}
 </head>
 
