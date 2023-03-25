@@ -30,9 +30,9 @@ params:
   socialIcons:
     - name: "email"
       url: "em@need2.cyou"
-    - name: "kofi"
+    - name: "Ko-fi"
       url: "https://ko-fi.com/need2"
-    - name: "rss"
+    - name: "RSS"
       url: "/index.xml"
   UseHugoToc: false
   disableSpecial1stPost: true
