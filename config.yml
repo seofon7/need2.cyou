@@ -52,7 +52,7 @@ params:
     enabled: false
   homeInfoParams:
     Title: "Hey there!"
-    Content: "Welcome to my blog! I'm Emmie. This is where I post all of my rambly thoughts about life. Feel free to poke around or [learn more about me and this site](/about). (note to self: make favicon)"
+    Content: "Welcome to my blog! I'm Emmie. This is where I post all of my rambly thoughts about life. Feel free to poke around or [learn more about me and this site](/about)."
   cover:
     responsiveImages: false
   fuseOpts:
