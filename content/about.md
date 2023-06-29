@@ -10,7 +10,7 @@ hideMeta: true
 
 Hi there, friends!
 
-I'm Emmie (she/her) and I'm an engineering dropout with an overactive internal monologue.
+I'm Emmie (she/her) and I'm just some college dropout with an overactive internal monologue.
 
 I made this site so that I would have a place to throw all my rants and ramblings. The above-mentioned internal monologue needs an outlet!
 
